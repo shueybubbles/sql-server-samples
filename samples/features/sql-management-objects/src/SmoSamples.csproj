@@ -12,15 +12,16 @@
     <EmbeddedResource Remove="out\**" />
     <None Remove="out\**" />
   </ItemGroup>
-  <ItemGroup>
+  <!-- <ItemGroup>
     <None Remove="ScriptOutput_Standalone_Linux.baseline.txt" />
     <None Remove="ScriptOutput_Standalone_Win.baseline.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ScriptOutput_Standalone_Linux.baseline.txt" />
     <EmbeddedResource Include="ScriptOutput_Standalone_Win.baseline.txt" />
-  </ItemGroup>
+  </ItemGroup> -->
   <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
     <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="150.18097.0-preview" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
