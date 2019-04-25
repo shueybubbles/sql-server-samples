@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Microsoft.SqlServer.Test.NetCoreSmo
+namespace Microsoft.SqlServer.SmoSamples
 {
     /// <summary>
     /// Provides an in-memory proxy with callbacks that allow tests to run code before transmission and after receipt of
