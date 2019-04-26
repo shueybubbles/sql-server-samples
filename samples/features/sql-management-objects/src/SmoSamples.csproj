@@ -8,6 +8,9 @@
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <DefaultNamespace>Microsoft.SqlSerer.SmoSamples</DefaultNamespace>
   </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Microsoft.SqlServer.SmoSamples</RootNamespace>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Remove="out\**" />
     <EmbeddedResource Remove="out\**" />
@@ -23,11 +26,11 @@
   </ItemGroup> -->
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
-    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="150.18097.0-preview" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.1" />
-    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="150.18118.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
   </ItemGroup>
 </Project>

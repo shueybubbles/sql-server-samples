@@ -15,7 +15,7 @@ namespace Microsoft.SqlServer.SmoSamples
     static class ConnectionHelpers
     {
 
-        static public ServerConnection GetTestConnection(this Microsoft.VisualStudio.TestTools.UnitTesting.TestContext context, ConnectionType connectionType = ConnectionType.Default)
+        public static ServerConnection GetTestConnection(this VisualStudio.TestTools.UnitTesting.TestContext context, ConnectionType connectionType = ConnectionType.Default)
         {
             var connectionString = context.GetConnectionString();
             var connectionStrBuilder = new SqlConnectionStringBuilder(connectionString);
@@ -45,7 +45,7 @@ namespace Microsoft.SqlServer.SmoSamples
             return new ServerConnection(instanceName, sqlServerLogin, password);
         }
 
-        static public string GetConnectionString(this Microsoft.VisualStudio.TestTools.UnitTesting.TestContext context)
+        public static string GetConnectionString(this VisualStudio.TestTools.UnitTesting.TestContext context)
         {
             var connectionString = context.Properties["connectionString"].ToString();
             Assert.That(connectionString, Is.Not.Empty, "connectionString must be set");
@@ -61,7 +61,7 @@ namespace Microsoft.SqlServer.SmoSamples
         /// Returns the name of the database to use for the tests
         /// </summary>
         /// <returns></returns>
-        static public string GetTestDatabaseName(this Microsoft.VisualStudio.TestTools.UnitTesting.TestContext context)
+        public static string GetTestDatabaseName(this VisualStudio.TestTools.UnitTesting.TestContext context)
         {
             var databaseName  = Environment.GetEnvironmentVariable("TEST_DATABASE");
             if (string.IsNullOrEmpty(databaseName))
@@ -78,7 +78,7 @@ namespace Microsoft.SqlServer.SmoSamples
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        static public string GetResultsFolder(this Microsoft.VisualStudio.TestTools.UnitTesting.TestContext context)
+        public static string GetResultsFolder(this VisualStudio.TestTools.UnitTesting.TestContext context)
         {
             var path = Environment.GetEnvironmentVariable("RESULTS_FOLDER");
             if (string.IsNullOrEmpty(path))
@@ -99,7 +99,7 @@ namespace Microsoft.SqlServer.SmoSamples
         /// <param name="context"></param>
         /// <param name="action"></param>
         /// <param name="preCreateAction"></param>
-        static public void ExecuteWithDbDrop(this Microsoft.VisualStudio.TestTools.UnitTesting.TestContext context, Action<Database> action, Action<Database> preCreateAction = null)
+        public static void ExecuteWithDbDrop(this VisualStudio.TestTools.UnitTesting.TestContext context, Action<Database> action, Action<Database> preCreateAction = null)
         {
             var dbName = string.Format("{0}{1}", context.TestName, new Random().Next());
             var serverConnection = context.GetTestConnection();
