@@ -1,7 +1,4 @@
-﻿//
-// Copyright (C) Microsoft Corporation. All rights reserved.
-//
-using System;
+﻿using System;
 using System.Data.SqlClient;
 using System.Net.Sockets;
 using System.Net;
