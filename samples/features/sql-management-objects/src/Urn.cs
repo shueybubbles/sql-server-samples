@@ -37,7 +37,6 @@ using Assert=NUnit.Framework.Assert;
         public virtual void Server_Urn_has_Name_matching_InstanceName()
         {
             var connection = TestContext.GetTestConnection();
-            connection.q
             var server = new Management.Smo.Server(connection);
             Assert.That(server.Urn.Value, Is.EqualTo($"Server[@Name='{Urn.EscapeString(connection.TrueName)}']"), "Server URN");
         }
